@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-const colors = require("tailwindcss/colors");
 
 const config: Config = {
   content: [
@@ -7,14 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    colors: {
-      white: colors.white,
-      black: colors.black,
-      transparent: colors.transparent,
-      purple: "#",
-    },
-  },
+  theme: {},
   darkMode: "class", // media & class
   plugins: [require("@tailwindcss/forms")],
 };

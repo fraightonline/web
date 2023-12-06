@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { v4 } from "uuid";
 
 interface Vehicle {
@@ -10,10 +10,16 @@ interface Vehicle {
 }
 
 const MAX_VEHICLES = 10;
+const MIN_VEHICLES = 1;
 const BRANDS = ["Scania", "Volvo", "DAF", "Renault", "Iveco", "MAN"];
 
 const Vehicles = () => {
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+
+  // Add random vehicle at first render
+  useEffect(() => {
+    addVehicle();
+  }, []);
 
   const addVehicle = () => {
     setVehicles([
@@ -52,23 +58,73 @@ const Vehicles = () => {
 
   return (
     <div className="mx-auto max-w-2xl lg:max-w-4xl px-4 sm:px-6 lg:px-8 py-4">
-      <button
-        className="px-4 py-1 bg-black/10 hover:bg-black/20 disabled:text-black/50 transition mr-2 mb-2"
-        onClick={addVehicle}
-        disabled={vehicles.length === MAX_VEHICLES}
-      >
-        Add
-      </button>
-      <button
-        className="px-4 py-1 bg-black/10 hover:bg-black/20 disabled:text-black/50 transition"
-        onClick={removeVehicle}
-        disabled={vehicles.length === 0}
-      >
-        Remove
-      </button>
-      {vehicles.map((v: Vehicle) => (
-        <p key={v.id}>{`${v.license} | ${v.brand}`}</p>
-      ))}
+      <div className="flex flex-col justify-center">
+        <div className="w-full mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+          <header className="px-5 py-4 border-b border-gray-100 flex flex-row justify-between">
+            <h2 className="font-semibold text-gray-800">Vehicles</h2>
+            <div>
+              <button
+                className="px-4 py-2 text-xs font-semibold uppercase text-gray-400 bg-gray-50 hover:bg-gray-200 disabled:cursor-not-allowed transition mr-2"
+                onClick={addVehicle}
+                disabled={vehicles.length === MAX_VEHICLES}
+              >
+                Add
+              </button>
+              <button
+                className="px-4 py-2 text-xs font-semibold uppercase text-gray-400 bg-gray-50 hover:bg-gray-200 disabled:cursor-not-allowed transition"
+                onClick={removeVehicle}
+                disabled={vehicles.length === MIN_VEHICLES}
+              >
+                Remove
+              </button>
+            </div>
+          </header>
+          <div className="p-3">
+            <div className="overflow-x-auto">
+              <table className="table-auto w-full">
+                <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+                  <tr>
+                    <th className="p-2 whitespace-nowrap">
+                      <div className="font-semibold text-left">License</div>
+                    </th>
+                    <th className="p-2 whitespace-nowrap">
+                      <div className="font-semibold text-left">Brand</div>
+                    </th>
+                    <th className="p-2 whitespace-nowrap">
+                      <div className="font-semibold text-left">Value</div>
+                    </th>
+                    <th className="p-2 whitespace-nowrap">
+                      <div className="font-semibold text-left">Driver</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-sm divide-y divide-gray-100">
+                  {vehicles.map((v: Vehicle) => (
+                    <tr key={v.id}>
+                      <td className="p-2 whitespace-nowrap">
+                        <div className="font-medium text-gray-800">
+                          {v.license}
+                        </div>
+                      </td>
+                      <td className="p-2 whitespace-nowrap">
+                        <div className="text-left">{v.brand}</div>
+                      </td>
+                      <td className="p-2 whitespace-nowrap">
+                        <div className="text-left font-medium text-green-500">
+                          &euro; 1.337,69
+                        </div>
+                      </td>
+                      <td className="p-2 whitespace-nowrap">
+                        <div className="text-left">R. van Rees</div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
