@@ -1,6 +1,138 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import packageJson from "../../../package.json";
+
+const lag: number = 3456;
+
 const Footer = () => {
+  const [status, setStatus] = useState<Status>();
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      fetch("/api/status")
+        .then((res) => res.json())
+        .then((data) => {
+          setStatus(data.status);
+          setLoading(false);
+        });
+    }, lag);
+  }, []);
+
   return (
     <div className="mx-auto max-w-2xl lg:max-w-4xl py-2 lg:px-0 md:px-0 px-4">
+      <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-4">
+        <div className="flex flex-col gap-y-1">
+          <h4 className="text-md font-bold text-asphalt">Explore</h4>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            About
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Services
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Large Language Model
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            API
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Careers
+          </a>
+        </div>
+        <div className="flex flex-col gap-y-1">
+          <h4 className="text-md font-bold text-asphalt">Contact</h4>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            General information
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Branches
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Advertising
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Press kit
+          </a>
+        </div>
+        <div className="flex flex-col gap-y-1">
+          <h4 className="text-md font-bold text-asphalt">Support</h4>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Chatbot
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Customer service
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            FAQ
+          </a>
+          <a
+            href="https://github.com/fraightonline/web"
+            target="_blank"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Version {packageJson.version}
+          </a>
+        </div>
+        <div className="flex flex-col gap-y-1">
+          <h4 className="text-md font-bold text-asphalt">Legal</h4>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Terms of service
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Privacy policy
+          </a>
+          <a
+            href="#"
+            className="text-xs hover:text-blue hover:underline transition"
+          >
+            Docs
+          </a>
+        </div>
+      </div>
       <div className="flex flex-row justify-between border-t border-gray py-2">
         <div className="mt-1.5">
           <p className="text-xs text-asphalt/75">
@@ -13,7 +145,15 @@ const Footer = () => {
             All rights reserved.
           </p>
         </div>
-        <div className="hidden lg:block p-x-4"></div>
+        <div className="hidden lg:block p-x-4">
+          <span
+            className={`inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20 -mt-1 ${
+              isLoading ? "animate-pulse" : ""
+            }`}
+          >
+            {isLoading ? "Fetching status..." : status?.message}
+          </span>
+        </div>
         <div className="flex flex-row mt-1.5">
           <div>
             <a href="https://www.threads.net/@fraightonline" target="_blank">
@@ -42,9 +182,9 @@ const Footer = () => {
                 className="ml-2 fill-asphalt/50 hover:fill-asphalt transition"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-                ></path>{" "}
+                ></path>
               </svg>
             </a>
           </div>
