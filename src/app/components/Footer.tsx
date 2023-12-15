@@ -21,8 +21,8 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="mx-auto max-w-2xl lg:max-w-4xl py-2 lg:px-0 md:px-0 px-4">
-      <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-4">
+    <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4">
+      <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-8">
         <div className="flex flex-col gap-y-1">
           <h4 className="text-md font-bold text-asphalt">Explore</h4>
           <a
@@ -146,13 +146,25 @@ const Footer = () => {
           </p>
         </div>
         <div className="hidden lg:block p-x-4">
-          <span
-            className={`inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20 -mt-1 ${
-              isLoading ? "animate-pulse" : ""
-            }`}
-          >
-            {isLoading ? "Fetching status..." : status?.message}
-          </span>
+          {isLoading ? (
+            <span className="text-xs animate-pulse font-mono text-asphalt/75">
+              Fetching status&hellip;
+            </span>
+          ) : (
+            <div className="px-2 flex flex-row mt-0.5">
+              <span className="relative flex h-2 w-2 mt-2 mr-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              <a
+                href="/api/status"
+                target="_blank"
+                className="text-xs leading-6 font-mono text-asphalt/75 hover:text-blue transition"
+              >
+                {status?.message}
+              </a>
+            </div>
+          )}
         </div>
         <div className="flex flex-row mt-1.5">
           <div>

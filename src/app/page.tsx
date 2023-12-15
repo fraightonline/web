@@ -1,10 +1,8 @@
-import Content from "./components/Content";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="text-asphalt">
-      <Content />
+    <div className="h-screen bg-pearl text-asphalt dark:bg-asphalt dark:text-pearl">
       <Footer />
     </div>
   );
