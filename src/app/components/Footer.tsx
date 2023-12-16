@@ -24,121 +24,121 @@ const Footer = () => {
     <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4">
       <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-8">
         <div className="flex flex-col gap-y-1">
-          <h4 className="text-md font-bold text-asphalt">Explore</h4>
+          <h4 className="text-md font-bold">Explore</h4>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             About
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Services
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Large Language Model
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             API
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Careers
           </a>
         </div>
         <div className="flex flex-col gap-y-1">
-          <h4 className="text-md font-bold text-asphalt">Contact</h4>
+          <h4 className="text-md font-bold">Contact</h4>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             General information
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Branches
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Advertising
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Press kit
           </a>
         </div>
         <div className="flex flex-col gap-y-1">
-          <h4 className="text-md font-bold text-asphalt">Support</h4>
+          <h4 className="text-md font-bold">Support</h4>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Chatbot
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Customer service
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             FAQ
           </a>
           <a
             href="https://github.com/fraightonline/web"
             target="_blank"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Version {packageJson.version}
           </a>
         </div>
         <div className="flex flex-col gap-y-1">
-          <h4 className="text-md font-bold text-asphalt">Legal</h4>
+          <h4 className="text-md font-bold">Legal</h4>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Terms of service
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Privacy policy
           </a>
           <a
             href="#"
-            className="text-xs hover:text-blue hover:underline transition"
+            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
           >
             Docs
           </a>
         </div>
       </div>
-      <div className="flex flex-row justify-between border-t border-gray py-2">
+      <div className="flex flex-row justify-between border-t border-gray dark:border-white/10 py-2">
         <div className="mt-1.5">
-          <p className="text-xs text-asphalt/75">
+          <p className="text-xs text-asphalt/75 dark:text-pearl/50">
             <a
               href="https://fraight.online"
-              className="font-bold text-asphalt hover:text-blue transition mr-1"
+              className="font-bold text-asphalt hover:text-blue dark:text-pearl dark:hover:text-gold transition mr-1"
             >
               Fraight
             </a>
@@ -147,7 +147,7 @@ const Footer = () => {
         </div>
         <div className="hidden lg:block p-x-4">
           {isLoading ? (
-            <span className="text-xs animate-pulse font-mono text-asphalt/75">
+            <span className="text-xxs animate-pulse font-mono text-asphalt/75 dark:text-pearl/50">
               Fetching status&hellip;
             </span>
           ) : (
@@ -159,7 +159,7 @@ const Footer = () => {
               <a
                 href="/api/status"
                 target="_blank"
-                className="text-xs leading-6 font-mono text-asphalt/75 hover:text-blue transition"
+                className="text-xxs leading-6 font-mono text-asphalt/75 hover:text-asphalt dark:hover:text-pearl dark:text-pearl/50 transition"
               >
                 {status?.message}
               </a>
@@ -176,7 +176,7 @@ const Footer = () => {
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
-                className="ml-2 fill-asphalt/50 hover:fill-asphalt transition"
+                className="fill-asphalt/50 hover:fill-asphalt dark:fill-pearl/50 dark:hover:fill-pearl transition"
               >
                 <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948.591.621.928 1.509 1.005 2.644.328.138.63.299.905.484 1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.217 6.217 0 0 0-1.528-.161" />
               </svg>
@@ -191,7 +191,7 @@ const Footer = () => {
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
-                className="ml-2 fill-asphalt/50 hover:fill-asphalt transition"
+                className="ml-3 fill-asphalt/50 hover:fill-asphalt dark:fill-pearl/50 dark:hover:fill-pearl transition"
               >
                 <path
                   fillRule="evenodd"
