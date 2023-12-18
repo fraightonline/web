@@ -4,7 +4,7 @@ const Header = () => {
       <div className="hidden sm:mb-8 sm:flex sm:justify-center">
         <div className="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 transition">
           Announcing our new AI model.{" "}
-          <a href="#" className="font-semibold text-secondary">
+          <a href="#content" className="font-semibold text-secondary">
             <span className="absolute inset-0" aria-hidden="true" />
             Read more <span aria-hidden="true">&rarr;</span>
           </a>
@@ -22,16 +22,16 @@ const Header = () => {
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <a
-            href="#"
+            href="mailto:hello@fraight.online"
             className="rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-secondary/75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition"
           >
             Get started
           </a>
           <a
-            href="#"
+            href="#content"
             className="text-sm font-semibold leading-6 hover:text-secondary transition"
           >
-            Learn more <span aria-hidden="true">→</span>
+            Learn more
           </a>
         </div>
       </div>

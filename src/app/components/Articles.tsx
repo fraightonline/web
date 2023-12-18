@@ -1,6 +1,9 @@
 const Articles = () => {
   return (
-    <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4 pb-16">
+    <div
+      className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4 pb-24"
+      id="content"
+    >
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <h2 className="text-3xl font-bold tracking-tight">
           Lorem ipsum dolor<span className="text-secondary">.</span>
