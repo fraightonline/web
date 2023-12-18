@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import packageJson from "../../../package.json";
 
 const lag: number = 3456;
 
@@ -103,13 +102,6 @@ const Footer = () => {
           >
             FAQ
           </a>
-          <a
-            href="https://github.com/fraightonline/web"
-            target="_blank"
-            className="text-xs hover:text-asphalt dark:hover:text-pearl text-asphalt/75 dark:text-pearl/50 transition"
-          >
-            Version {packageJson.version}
-          </a>
         </div>
         <div className="flex flex-col gap-y-1">
           <h4 className="text-md font-bold">Legal</h4>
@@ -133,12 +125,12 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-row justify-between border-t border-gray dark:border-white/10 py-2">
+      <div className="flex flex-row justify-between border-t border-asphalt/10 dark:border-white/10 py-2">
         <div className="mt-1.5">
           <p className="text-xs text-asphalt/75 dark:text-pearl/50">
             <a
               href="https://fraight.online"
-              className="font-bold text-asphalt hover:text-blue dark:text-pearl dark:hover:text-gold transition mr-1"
+              className="font-bold text-asphalt hover:text-secondary dark:text-pearl transition mr-1"
             >
               Fraight
             </a>
