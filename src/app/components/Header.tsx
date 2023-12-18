@@ -1,39 +1,32 @@
+const stats = [
+  { name: "Offices worldwide", value: "12" },
+  { name: "Full-time colleagues", value: "300+" },
+  { name: "Hours per week", value: "40" },
+  { name: "Paid time off", value: "Unlimited" },
+];
+
 const Header = () => {
   return (
     <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4 py-16 pb-24">
-      <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div className="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 transition">
-          Announcing our new AI model.{" "}
-          <a href="#content" className="font-semibold text-secondary">
-            <span className="absolute inset-0" aria-hidden="true" />
-            Read more <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-      </div>
       <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+        <h1 className="text-5xl font-bold tracking-tight">
           AI driven Freight Technologies
-          <span className="text-secondary">.</span>
         </h1>
-        <p className="mt-6 text-lg leading-8 text-asphalt/75">
+        <p className="mt-6 text-md leading-8 text-pearl/50 sm:px-16 px-4">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
           aliqua.
         </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6">
-          <a
-            href="mailto:hello@fraight.online"
-            className="rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-secondary/75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition"
-          >
-            Get started
-          </a>
-          <a
-            href="#content"
-            className="text-sm font-semibold leading-6 hover:text-secondary transition"
-          >
-            Learn more
-          </a>
-        </div>
+        <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat) => (
+            <div key={stat.name} className="flex flex-col-reverse">
+              <dt className="text-base leading-7 text-pearl/50">{stat.name}</dt>
+              <dd className="text-2xl font-bold leading-9 tracking-tight text-pearl">
+                {stat.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   );

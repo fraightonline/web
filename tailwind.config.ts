@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        violet: "#ff2a60",
         secondary: "#0557ff",
         pearl: "#fcfcfd",
         asphalt: "#2c3e50",
