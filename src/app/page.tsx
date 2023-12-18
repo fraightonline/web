@@ -1,8 +1,10 @@
+import Articles from "./components/Articles";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-pearl text-asphalt dark:bg-charcoal dark:text-pearl transition">
+    <div className="h-screen bg-charcoal text-pearl transition">
+      <Articles />
       <Footer />
     </div>
   );
