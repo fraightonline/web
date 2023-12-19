@@ -35,7 +35,7 @@ const Footer = () => {
               href="#"
               className="text-xs hover:text-pearl text-pearl/50 transition"
             >
-              Large Language Model
+              About
             </a>
             <a
               href="#"
@@ -47,10 +47,11 @@ const Footer = () => {
           <div className="flex flex-col gap-y-1">
             <h4 className="text-md font-bold">Contact</h4>
             <a
-              href="#"
+              href="https://www.google.nl/maps/place/Rotterdam/@51.9280632,4.4084283,12z/data=!3m1!4b1!4m6!3m5!1s0x47c5b7605f54c47d:0x5229bbac955e4b85!8m2!3d51.9244201!4d4.4777326!16zL20vMDZoZGs?entry=ttu"
+              target="_blank"
               className="text-xs hover:text-pearl text-pearl/50 transition"
             >
-              +316 1337 1337
+              Rotterdam, The Netherlands
             </a>
             <a
               href="mailto:hello@fraight.online"
@@ -59,11 +60,10 @@ const Footer = () => {
               hello@fraight.online
             </a>
             <a
-              href="https://www.google.nl/maps/place/Rotterdam/@51.9280632,4.4084283,12z/data=!3m1!4b1!4m6!3m5!1s0x47c5b7605f54c47d:0x5229bbac955e4b85!8m2!3d51.9244201!4d4.4777326!16zL20vMDZoZGs?entry=ttu"
-              target="_blank"
+              href="#"
               className="text-xs hover:text-pearl text-pearl/50 transition"
             >
-              Rotterdam, The Netherlands
+              +316 1337 1337
             </a>
           </div>
           <div className="flex flex-col gap-y-1">
@@ -123,7 +123,7 @@ const Footer = () => {
                 />
                 Fraight
               </a>
-              All rights reserved.
+              AI driven freight technologies.
             </p>
           </div>
           <div className="hidden lg:block p-x-4">
