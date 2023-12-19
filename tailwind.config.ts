@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require("tailwindcss/colors");
 
 const config: Config = {
   content: [
@@ -7,15 +8,19 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      transparent: colors.transparent,
+      black: colors.black,
+      white: colors.white,
+      green: colors.green,
+      asphalt: "#101820",
+      pearl: "#ededed",
+      orange: "#ff9818",
+      violet: "#ff176d",
+      marine: "#4f42f7",
+      aqua: "#12c9fd",
+    },
     extend: {
-      colors: {
-        violet: "#ff2a60",
-        blue: "#0557ff",
-        pearl: "#fcfcfd",
-        asphalt: "#2c3e50",
-        charcoal: "#101820",
-        chalk: "#7d8590",
-      },
       fontSize: {
         xxs: "0.65rem",
       },
