@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const lag: number = 3456;
+const lag: number = 1337;
 
 const Footer = () => {
   const [status, setStatus] = useState<Status>();
@@ -24,15 +24,7 @@ const Footer = () => {
       <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4">
         <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-8 text-center">
           <div className="flex flex-col gap-y-1">
-            <h4 className="text-md font-bold">
-              Explore<span className="text-violet text-2xl">.</span>
-            </h4>
-            <a
-              href="#"
-              className="text-xs hover:text-pearl text-pearl/50 transition"
-            >
-              About
-            </a>
+            <h4 className="text-md font-bold">Explore</h4>
             <a
               href="#"
               className="text-xs hover:text-pearl text-pearl/50 transition"
@@ -51,57 +43,42 @@ const Footer = () => {
             >
               API
             </a>
+          </div>
+          <div className="flex flex-col gap-y-1">
+            <h4 className="text-md font-bold">Contact</h4>
             <a
               href="#"
               className="text-xs hover:text-pearl text-pearl/50 transition"
             >
-              Careers
+              +316 1337 1337
+            </a>
+            <a
+              href="mailto:hello@fraight.online"
+              className="text-xs hover:text-pearl text-pearl/50 transition"
+            >
+              hello@fraight.online
+            </a>
+            <a
+              href="https://www.google.nl/maps/place/Rotterdam/@51.9280632,4.4084283,12z/data=!3m1!4b1!4m6!3m5!1s0x47c5b7605f54c47d:0x5229bbac955e4b85!8m2!3d51.9244201!4d4.4777326!16zL20vMDZoZGs?entry=ttu"
+              target="_blank"
+              className="text-xs hover:text-pearl text-pearl/50 transition"
+            >
+              Rotterdam, The Netherlands
             </a>
           </div>
           <div className="flex flex-col gap-y-1">
-            <h4 className="text-md font-bold">
-              Contact<span className="text-violet text-2xl">.</span>
-            </h4>
+            <h4 className="text-md font-bold">Support</h4>
             <a
-              href="#"
+              href="mailto:hello@fraight.online"
               className="text-xs hover:text-pearl text-pearl/50 transition"
             >
-              General information
+              Helpdesk
             </a>
             <a
               href="#"
               className="text-xs hover:text-pearl text-pearl/50 transition"
             >
-              Branches
-            </a>
-            <a
-              href="#"
-              className="text-xs hover:text-pearl text-pearl/50 transition"
-            >
-              Advertising
-            </a>
-            <a
-              href="#"
-              className="text-xs hover:text-pearl text-pearl/50 transition"
-            >
-              Press kit
-            </a>
-          </div>
-          <div className="flex flex-col gap-y-1">
-            <h4 className="text-md font-bold">
-              Support<span className="text-violet text-2xl">.</span>
-            </h4>
-            <a
-              href="#"
-              className="text-xs hover:text-pearl text-pearl/50 transition"
-            >
-              Chatbot
-            </a>
-            <a
-              href="#"
-              className="text-xs hover:text-pearl text-pearl/50 transition"
-            >
-              Customer service
+              Security
             </a>
             <a
               href="#"
@@ -111,9 +88,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex flex-col gap-y-1">
-            <h4 className="text-md font-bold">
-              Legal<span className="text-violet text-2xl">.</span>
-            </h4>
+            <h4 className="text-md font-bold">Legal</h4>
             <a
               href="#"
               className="text-xs hover:text-pearl text-pearl/50 transition"
@@ -130,7 +105,7 @@ const Footer = () => {
               href="#"
               className="text-xs hover:text-pearl text-pearl/50 transition"
             >
-              Docs
+              Cookies
             </a>
           </div>
         </div>
@@ -139,10 +114,10 @@ const Footer = () => {
             <p className="text-xs text-pearl/50">
               <a
                 href="https://fraight.online"
-                className="font-bold hover:text-blue text-pearl transition mr-1"
+                className="font-bold text-pearl hover:underline transition mr-1.5"
               >
                 <img
-                  className="mx-auto h-6 mr-2 inline"
+                  className="mx-auto h-6 mr-1.5 inline"
                   src="/logo.png"
                   alt="Fraight"
                 />
@@ -165,7 +140,7 @@ const Footer = () => {
                 <a
                   href="/api/status"
                   target="_blank"
-                  className="text-xxs leading-6 font-mono hover:text-blue text-pearl/50 transition"
+                  className="text-xxs leading-6 font-mono hover:text-pearl text-pearl/50 transition"
                 >
                   {status?.message}
                 </a>
