@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         violet: "#ff2a60",
-        secondary: "#0557ff",
+        blue: "#0557ff",
         pearl: "#fcfcfd",
         asphalt: "#2c3e50",
         charcoal: "#101820",

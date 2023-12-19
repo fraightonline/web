@@ -20,12 +20,12 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="pb-4 sm:pb-16 py-4 text-pearl relative isolate overflow-hidden">
+    <div className="bg-charcoal pb-4 sm:pb-16 py-4 text-pearl relative isolate overflow-hidden">
       <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4">
-        {/* <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-8 text-center">
+        <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-8 text-center">
           <div className="flex flex-col gap-y-1">
             <h4 className="text-md font-bold">
-              Explore<span className="text-secondary text-2xl">.</span>
+              Explore<span className="text-violet text-2xl">.</span>
             </h4>
             <a
               href="#"
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-y-1">
             <h4 className="text-md font-bold">
-              Contact<span className="text-secondary text-2xl">.</span>
+              Contact<span className="text-violet text-2xl">.</span>
             </h4>
             <a
               href="#"
@@ -89,7 +89,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-y-1">
             <h4 className="text-md font-bold">
-              Support<span className="text-secondary text-2xl">.</span>
+              Support<span className="text-violet text-2xl">.</span>
             </h4>
             <a
               href="#"
@@ -112,7 +112,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-y-1">
             <h4 className="text-md font-bold">
-              Legal<span className="text-secondary text-2xl">.</span>
+              Legal<span className="text-violet text-2xl">.</span>
             </h4>
             <a
               href="#"
@@ -133,14 +133,19 @@ const Footer = () => {
               Docs
             </a>
           </div>
-        </div> */}
+        </div>
         <div className="flex flex-row justify-between border-t border-asphalt/10 dark:border-white/10 py-2">
           <div className="mt-1.5">
             <p className="text-xs text-pearl/50">
               <a
                 href="https://fraight.online"
-                className="font-bold hover:text-secondary text-pearl transition mr-1"
+                className="font-bold hover:text-blue text-pearl transition mr-1"
               >
+                <img
+                  className="mx-auto h-6 mr-2 inline"
+                  src="/logo.png"
+                  alt="Fraight"
+                />
                 Fraight
               </a>
               All rights reserved.
@@ -160,7 +165,7 @@ const Footer = () => {
                 <a
                   href="/api/status"
                   target="_blank"
-                  className="text-xxs leading-6 font-mono hover:text-pearl text-pearl/50 transition"
+                  className="text-xxs leading-6 font-mono hover:text-blue text-pearl/50 transition"
                 >
                   {status?.message}
                 </a>
@@ -203,6 +208,18 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div
+        className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
+        aria-hidden="true"
+      >
+        <div
+          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#00f0ff] to-[#0557ff] opacity-30"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+        />
       </div>
     </div>
   );
