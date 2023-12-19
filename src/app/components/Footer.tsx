@@ -20,7 +20,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="bg-charcoal pb-4 sm:pb-16 py-4 text-pearl relative isolate overflow-hidden">
+    <footer className="bg-charcoal pb-4 sm:pb-16 py-4 text-pearl relative isolate overflow-hidden">
       <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4">
         <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-8 text-center">
           <div className="flex flex-col gap-y-1">
@@ -221,7 +221,7 @@ const Footer = () => {
           }}
         />
       </div>
-    </div>
+    </footer>
   );
 };
 
