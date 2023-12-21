@@ -4,7 +4,7 @@ const Content = () => {
   return (
     <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 my-8 sm:my-16 gap-x-16 gap-y-24">
-        <div>
+        <div className="sm:order-first order-last">
           <Stats />
         </div>
         <div>
