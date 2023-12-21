@@ -16,7 +16,7 @@ const Content = () => {
         />
       </div>
       <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 my-8 sm:my-32 gap-x-16 gap-y-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 my-8 sm:mb-32 gap-x-16 gap-y-24">
           <div>
             <Stats />
           </div>
