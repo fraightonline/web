@@ -20,9 +20,9 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-asphalt pb-2 sm:pb-4 py-4 text-white relative isolate overflow-hidden">
+    <footer className="bg-asphalt pb-2 text-white relative isolate overflow-hidden">
       <div className="mx-auto max-w-2xl lg:max-w-4xl py-4 lg:px-0 md:px-0 px-4">
-        <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-8 pb-16 text-center">
+        <div className="grid sm:grid-cols-4 grid-cols-2 gap-y-4 py-8 text-center">
           <div className="flex flex-col gap-y-1">
             <h4 className="text-md font-bold">Explore</h4>
             <a
