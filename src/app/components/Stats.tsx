@@ -4,8 +4,10 @@ const Stats = () => {
       <h3 className="bg-gradient-to-r from-orange to-violet inline-block text-transparent bg-clip-text text-lg font-medium">
         Efficiency
       </h3>
-      <h1 className="text-5xl font-bold text-gray-800 dark:text-white">+36%</h1>
-      <span className=" text-black/50 font-medium">Compared to last year.</span>
+      <h2 className="text-5xl text-black dark:text-white font-bold transition">
+        +36%
+      </h2>
+      <span className="font-medium">Compared to last year overall data.</span>
       <svg
         className="w-full mt-8"
         viewBox="0 0 218 69"
@@ -15,14 +17,14 @@ const Stats = () => {
         <path
           d="M0 67.5C27.8998 67.5 24.6002 15 52.5 15C80.3998 15 77.1002 29 105 29C132.9 29 128.6 52 156.5 52C184.4 52 189.127 63.8158 217.027 63.8158"
           stroke="url(#paint0_linear_622:13664)"
-          stroke-width="3"
-          stroke-linecap="round"
+          strokeWidth="3"
+          strokeLinecap="round"
         />
         <path
           d="M0 67.5C27.2601 67.5 30.7399 31 58 31C85.2601 31 80.7399 2 108 2C135.26 2 134.74 43 162 43C189.26 43 190.74 63.665 218 63.665"
           stroke="url(#paint1_linear_622:13664)"
-          stroke-width="3"
-          stroke-linecap="round"
+          strokeWidth="3"
+          strokeLinecap="round"
         />
         <defs>
           <linearGradient
@@ -33,8 +35,8 @@ const Stats = () => {
             y2="15"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#4f42f7" />
-            <stop offset="1" stop-color="#12c9fd" />
+            <stop stopColor="#4f42f7" />
+            <stop offset="1" stopColor="#12c9fd" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_622:13664"
@@ -44,19 +46,19 @@ const Stats = () => {
             y2="18.9795"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#ff176d" />
-            <stop offset="1" stop-color="#ff9818" />
+            <stop stopColor="#ff176d" />
+            <stop offset="1" stopColor="#ff9818" />
           </linearGradient>
         </defs>
       </svg>
-      <ul role="list" className="space-y-3 pt-8 text-black/50">
+      <ul role="list" className="space-y-3 pt-8">
         <li className="space-x-2">
           <span className="text-md text-black/50 font-medium">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="green"
-              className="w-6 h-6 inline -mt-1 -ml-1"
+              className="w-6 h-6 inline -mt-1 -ml-1 fill-sevenup"
             >
               <path
                 fillRule="evenodd"
@@ -72,8 +74,8 @@ const Stats = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="green"
-              className="w-6 h-6 inline -mt-1 -ml-1"
+              fill="currentColor"
+              className="w-6 h-6 inline -mt-1 -ml-1 fill-sevenup"
             >
               <path
                 fillRule="evenodd"
@@ -90,7 +92,7 @@ const Stats = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="green"
-              className="w-6 h-6 inline -mt-1 -ml-1"
+              className="w-6 h-6 inline -mt-1 -ml-1 fill-sevenup"
             >
               <path
                 fillRule="evenodd"

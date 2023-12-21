@@ -12,13 +12,13 @@ const config: Config = {
       transparent: colors.transparent,
       black: colors.black,
       white: colors.white,
-      green: colors.green,
       asphalt: "#101820",
       pearl: "#ededed",
       orange: "#ff9818",
       violet: "#ff176d",
       marine: "#4f42f7",
       aqua: "#12c9fd",
+      sevenup: "#2ecc71",
     },
     extend: {
       fontSize: {
@@ -26,7 +26,7 @@ const config: Config = {
       },
     },
   },
-  darkMode: "class", // media & class
+  darkMode: "media", // media & class
   plugins: [require("@tailwindcss/forms")],
 };
 export default config;
