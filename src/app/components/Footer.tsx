@@ -29,7 +29,7 @@ const Footer = () => {
               className="font-bold text-black dark:text-white hover:underline transition mr-1.5"
             >
               <img
-                className="mx-auto h-6 mr-1.5 inline"
+                className="mx-auto h-4 mr-1 inline"
                 src="/logo.png"
                 alt="Fraight"
               />

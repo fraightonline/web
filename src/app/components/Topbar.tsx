@@ -10,7 +10,7 @@ const Topbar = () => {
                 className="font-bold text-black dark:text-white hover:underline transition mr-1.5 transition"
               >
                 <img
-                  className="mx-auto h-6 mr-1.5 inline"
+                  className="mx-auto h-8 mr-1.5 inline"
                   src="/logo.png"
                   alt="Fraight"
                 />
